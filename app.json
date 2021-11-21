@@ -1,13 +1,39 @@
 {
+  "entryPagePath": "pages/index/index",
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/map/map",
+    "pages/mine/mine"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "岭南",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true,
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#0094ff",
+    "color": "#333",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./assets/icon/face.png",
+      "selectedIconPath": "./assets/icon/face_active.png"
+    },
+    {
+      "pagePath": "pages/map/map",
+      "text": "地图",
+      "iconPath": "./assets/icon/map.png",
+      "selectedIconPath": "./assets/icon/map_active.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "./assets/icon/mine.png",
+      "selectedIconPath": "./assets/icon/mine_active.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
