@@ -1,1 +1,29 @@
 /* pages/index/index.wxss */
+.img_box{
+  width: 350px;
+  margin: 50rpx auto;
+  position: relative;
+}
+
+image{
+  width: 100%;
+  display: block;
+}
+
+.mark{
+  outline: 2px solid yellow;
+  position: absolute;
+}
+
+.btn {
+  /* position: absolute;
+  bottom: 50rpx; */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 100rpx;
+}
+

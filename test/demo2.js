@@ -1,9 +1,18 @@
+/*
+ * @Description:
+ * @Author: RyangXie
+ * @Date: 2021-11-28 10:32:01
+ * @LastEditTime: 2021-11-28 10:32:01
+ * @LastEditors: RyangXie
+ * @Reference:
+ */
 import { request } from '../../request/request.js'
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    // http://tmp/b7lTP0AWFTfV7c0d7b41b947da700c194246f1c8e1c1.jpeg
   },
   // 获取手机信息的api
   getPhoneInfo () {
@@ -57,22 +66,7 @@ Page({
         //     this.faceId = faceId.access_token
         //   }
         // }
-        // 用图片临时路径，获取base64编码
         this.getbase64(res.tempFilePaths[0])
-        // 调用图片尺寸的方法
-        this.calc(res.tempFilePaths[0])
-      }
-    })
-  },
-  // 计算图片尺寸
-  calc (url) {
-    wx.getImageInfo({
-      src: url,
-      success: (res) => {
-        console.log(350 / res.width);
-        this.setData({
-          i: 350 / res.width
-        })
       }
     })
   },
@@ -121,25 +115,11 @@ Page({
         // 图片的信息
         image: base,
         // 图片的格式
-        image_type: 'BASE64',
-        // 返回的人脸信息
-        face_field: 'beauty,age,expression,face_shape,gender,glasses,landmark,landmark150,quality,eye_status,emotion,face_type,mask,spoofing'
+        image_type: 'BASE64'
       }
     }).then(res => {
       // 获取图片base64
-      console.log(res.data.result.face_list[0]);
-      const face_list = res.data.result.face_list[0]
-      this.setData({
-        face_list
-      })
-    })
-  },
-
-  newPage () {
-    wx.startPullDownRefresh({
-      success () {
-        console.log('刷新成功');
-      }
+      console.log(res.data);
     })
   },
 
@@ -151,10 +131,5 @@ Page({
     this.hitokoto()
     this.getPhoneInfo()
     // this.getToken()
-  },
-  // 下拉刷新
-  onPullDownRefresh: function () {
-
-  },
-
+  }
 })
