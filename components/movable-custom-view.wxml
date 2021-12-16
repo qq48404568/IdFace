@@ -1,0 +1,12 @@
+<!--components/movable-custom-view/movable-custom-view.wxml-->
+<view class="move-view">
+  <movable-area class="custom-class" style="pointer-events: none;height: {{moveViewHeight}};width: 100%;left:0px;top:0px;position:fixed;">
+    <movable-view wx:if="{{show}}" direction="all" x="{{moveViewX}}" y="{{moveViewY}}" animation="{{false}}" style="pointer-events: auto; width: 40px;height:56px;z-index: 99999;" bindtap="onHome">
+      <view class="img-view">
+        <image src='../../images/returnindex.png' class="home-img"></image>
+        <view class="home-txt">返回首页</view>
+      </view>
+    </movable-view>
+    <slot></slot>
+  </movable-area>
+</view>

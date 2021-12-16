@@ -1,0 +1,33 @@
+  <!--颜值估算-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-btn text-dormeaemonBlue"></text> AI分析
+    </view>
+  </view>
+<view class="cu-list grid col-{{gridCol}} {{gridBorder?'':'no-border'}}">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key='index'>
+     <navigator hover-class="other-navigator-hover" open-type="navigate" bindtap='toPage' id="{{item.id}}">  
+      <view class="text-{{item.color}}">
+       <image src="{{item.icon}}" class='diyicon'></image>
+        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"hot":""}}</block>
+        </view>
+      </view>
+      </navigator>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+<!--底部说明文本-->
+  <view class="solids-bottom padding-xs flex align-center">
+    <view class="flex-sub text-center">
+      <view class="reason_txt">更多功能陆续接入中...</view>
+    </view>
+  </view>
+  <!--浮动按钮跳转主页-->
+<view class="round-click">
+ <navigator url='/pages/index/index' open-type="switchTab">
+ <image src="../../../images/tabbar/index_cur.png"></image>
+ </navigator >
+</view>
+<!--给一个高度让内显示完整-->
+<view class="cu-tabbar-height"></view>

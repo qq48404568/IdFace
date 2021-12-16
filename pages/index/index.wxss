@@ -1,4 +1,9 @@
 /* pages/index/index.wxss */
+
+.carousels{
+  margin-bottom: 30rpx;
+}
+
 .img_box{
   width: 350px;
   margin: 50rpx auto;
@@ -27,3 +32,18 @@ image{
   margin-top: 100rpx;
 }
 
+.landmark{
+ width: 8rpx;
+ height: 8rpx;
+ border-radius: 50%;
+ background-color: red; 
+ position: absolute;
+}
+.landmark:nth-of-type(2n){
+  background-color: greenyellow;
+}
+
+image{
+  width: 100%;
+  display: block;
+}

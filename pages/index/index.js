@@ -4,6 +4,56 @@ Page({
    * 页面的初始数据
    */
   data: {
+    elements: [{
+      title: 'AI颜值',
+      name: 'beauty',
+      color: 'cyan',
+      dir:'aiindex',
+      icon: 'emoji'
+    },
+    {
+      title: 'AI健康',
+      name: 'health',
+      color: 'blue',
+      dir:'aiindex',
+      icon: 'like'
+    },
+    {
+      title: 'AI恢复',
+      name: 'recovery',
+      color: 'red',
+      dir:'aiindex',
+      icon: 'refresh'
+    },
+    {
+      title: 'AI审核 ',
+      name: 'examine',
+      color: 'orange',
+      dir:'aiindex',
+      icon: 'filter'
+    },
+    {
+      title: 'AI处理',
+      name: 'handle',
+      color: 'olive',
+      dir:'aiindex',
+      icon: 'repair'
+    },
+    {
+      title: 'NAI',
+      name: 'nai',
+      color: 'green',
+      dir:'aiindex',
+      icon: 'usefull'
+    },
+    {
+      title: 'AI闲聊',
+      name: 'chatbot',
+      color: 'brown',
+      dir:'bizz',
+      icon: 'messagefill'
+    }
+    ],
   },
   // 获取手机信息的api
   getPhoneInfo () {
@@ -17,6 +67,16 @@ Page({
         })
       }
     })
+  },
+  // 获取轮播图数据
+  getSwiperList () {
+    request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata' })
+      .then(result => {
+        this.setData({
+          swiperList: result.data.message
+        })
+      })
+
   },
   // 获取一言
   hitokoto: function () {
@@ -132,6 +192,7 @@ Page({
       this.setData({
         face_list
       })
+      
     })
   },
 
@@ -150,6 +211,8 @@ Page({
     // this.getbase64()
     this.hitokoto()
     this.getPhoneInfo()
+    // 获取轮播图
+    this.getSwiperList()
     // this.getToken()
   },
   // 下拉刷新

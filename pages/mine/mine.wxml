@@ -1,15 +1,57 @@
-<!--pages/mine/mine.wxml-->
-<!-- <camera>xx</camera> -->
 
-<!-- 用户头像 -->
-<open-data class="uIcon" type="userAvatarUrl"></open-data>
-
-<!-- 用户名 -->
-<open-data type="userNickName"></open-data>
-
-<!--  -->
-<view>
-  <open-data type="userCountry"></open-data>
-  <open-data type="userProvince"></open-data>
-  <open-data type="userCity"></open-data>
+<scroll-view scroll-y class="scrollPage">
+<view class="UCenter-bg">
+  <view class="avatar">
+    <!-- 微信头像 -->
+    <view class="touxiang">
+      <open-data type="userAvatarUrl" open-gid="xxxxxx"></open-data>
+    </view>
+    <!-- 微信名字 -->
+    <view class="userNickName">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+  <image src="../../images/tabbar/wave.gif" mode="scaleToFill" class="gif-wave"></image>
 </view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content"  bindtap="myRecord">
+        <text class="cuIcon-list text-xsblue"></text>
+        <text class="text-grey">我的记录</text>
+      </view>
+  </view>
+  <view class="cu-item arrow">
+      <view class="content"  bindtap="onAchievement">
+        <text class="cuIcon-selectionfill text-xsblue"></text>
+        <text class="text-grey">手机品牌:{{b}}</text>
+      </view>
+  </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://gitee.com/xie-rongyang">
+        <text class="cuIcon-github text-grey"></text>
+        <text class="text-grey">Gitee</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">赞赏支持</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="contact" session-from="weapp">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">联系作者</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">关于作者</text>
+      </navigator>
+    </view>
+  </view>
+  <text class='reason_txt'>Version:1.0.1</text>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

@@ -1,8 +1,12 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    
+  },
+  "navigationBarTitleText": "我的",
+  "navigationStyle":"custom",
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "miniProgram",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",

@@ -1,0 +1,26 @@
+{
+  "name": "wechart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq48404568/IdFace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qq48404568/IdFace/issues"
+  },
+  "homepage": "https://github.com/qq48404568/IdFace#readme",
+  "dependencies": {
+    "vant-weapp": "^0.5.29"
+  }
+}

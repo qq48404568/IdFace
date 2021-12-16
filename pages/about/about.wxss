@@ -1,0 +1,20 @@
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+.reason_txt{
+  font-size: 32rpx;
+  color: #aaaaaa;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+  margin-top: 28rpx;
+}
+.reason_txt::before,.reason_txt::after{
+  display: table-cell;
+  content: "";
+  width: 50%;
+  background: linear-gradient(#aaaaaa, #aaaaaa) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}

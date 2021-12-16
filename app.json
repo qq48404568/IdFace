@@ -3,7 +3,10 @@
   "pages": [
     "pages/index/index",
     "pages/map/map",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/aiindex/beauty/beauty",
+    "pages/bizz/facebeauty/facebeauty",
+    "pages/about/about"
   ],
   "permission": {
     "scope.userLocation": {
@@ -14,7 +17,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#0094ff",
     "navigationBarTitleText": "岭南",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true,
     "backgroundColor": "#fff"
   },
@@ -42,7 +45,6 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }
